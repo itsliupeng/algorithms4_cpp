@@ -9,6 +9,7 @@
 #include <cstring>
 #include <ctime>
 #include <climits>
+#include <cmath>
 
 
 #include <string>

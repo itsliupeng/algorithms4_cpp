@@ -12,6 +12,7 @@ public:
 	int from() { return v; }
 	int to() { return w; }
 	double weight() { return wei; }
+	void weight(double val) { wei = val; }
 
 	bool operator<(DirectedEdge& e) { return this->weight() < e.weight(); }
 	bool operator>(DirectedEdge &e) { return this->weight() > e.weight(); }
@@ -21,7 +22,7 @@ public:
 };
 
 ostream& operator<< (ostream &out, DirectedEdge &e) {
-	out << e.from() << "->" << e.to() << " " << fixed << setprecision(2) << e.weight();
+	out << e.from() << "->" << e.to() << " " << fixed << setprecision(3) << e.weight()  << "\t";
 	return out;
 }
 #endif // !_L_DEDGE_H

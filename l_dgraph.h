@@ -4,7 +4,7 @@
 
 #include "l.h"
 
-class  DirectdGraph{
+class  DirectedGraph{
 public:
 	vector<vector<int> > adj;
 	int V;
@@ -15,7 +15,7 @@ public:
 	vector<bool> onStack;
 
 
-	DirectdGraph(const char* filename) {
+	DirectedGraph(const char* filename) {
 		FILE* fp = fopen(filename, "r");
 		assert(fp);
 		fscanf(fp, "%d", &V);
@@ -112,7 +112,7 @@ private:
 
 
 
-void p_dgraph(DirectdGraph* g) {
+void p_dgraph(DirectedGraph* g) {
 	cout << "graph: " << endl;
 	int i = 0;
 	for (auto v : g->adj) {
